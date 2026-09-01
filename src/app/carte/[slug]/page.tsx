@@ -81,14 +81,15 @@ function DishImage({
   badge?: string;
 }) {
   return (
-    <div className="relative aspect-[5/4] w-full overflow-hidden rounded-xl">
+    <div className="relative w-full overflow-hidden rounded-xl bg-blush">
       <Image
         src={image}
         alt={name}
-        fill
+        width={1200}
+        height={900}
         priority
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover"
+        className="h-auto w-full object-contain"
       />
       {badge && (
         <span className="absolute left-4 top-4 inline-flex items-center rounded-md bg-wine px-3 py-1.5 font-sans-clean text-[11px] font-semibold tracking-[0.2em] text-ivory uppercase shadow">

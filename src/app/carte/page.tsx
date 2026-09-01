@@ -97,13 +97,14 @@ export default function CartePage() {
 function DishCard({ dish }: { dish: Dish }) {
   return (
     <article className="flex flex-col rounded-xl border border-line bg-ivory p-3 shadow-[0_2px_12px_rgba(45,41,38,0.04)]">
-      <div className="relative aspect-[5/3] w-full overflow-hidden rounded-lg">
+      <div className="w-full overflow-hidden rounded-lg bg-blush">
         <Image
           src={dish.image}
           alt={dish.name}
-          fill
+          width={1200}
+          height={900}
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </div>
       <div className="flex flex-1 flex-col px-1 pb-1 pt-5">
@@ -130,13 +131,14 @@ function DishCard({ dish }: { dish: Dish }) {
 function DishCardMobile({ dish }: { dish: Dish }) {
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-line bg-ivory shadow-[0_2px_12px_rgba(45,41,38,0.04)]">
-      <div className="relative aspect-[16/9] w-full">
+      <div className="w-full bg-blush">
         <Image
           src={dish.image}
           alt={dish.name}
-          fill
+          width={1200}
+          height={900}
           sizes="100vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </div>
       <div className="flex items-end justify-between gap-3 px-5 py-5">

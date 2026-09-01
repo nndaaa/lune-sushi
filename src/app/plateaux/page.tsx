@@ -22,13 +22,14 @@ export default function PlateauxPage() {
                 key={dish.slug}
                 className="flex flex-col overflow-hidden rounded-xl border border-line bg-ivory"
               >
-                <div className="relative aspect-[16/9] w-full">
+                <div className="w-full bg-blush">
                   <Image
                     src={dish.image}
                     alt={dish.name}
-                    fill
+                    width={1200}
+                    height={900}
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
+                    className="h-auto w-full object-contain"
                   />
                 </div>
                 <div className="flex items-end justify-between p-6">
