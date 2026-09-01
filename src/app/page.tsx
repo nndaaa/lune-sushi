@@ -1,11 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-
-const NAV = [
-  { href: "/carte", label: "La carte" },
-  { href: "/plateaux", label: "Nos plateaux" },
-  { href: "/maison", label: "La maison" },
-  { href: "/infos", label: "Infos pratiques" },
-];
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
 export default function Home() {
   return (
@@ -18,52 +13,6 @@ export default function Home() {
       </main>
       <SiteFooter />
     </div>
-  );
-}
-
-function SiteHeader() {
-  return (
-    <header className="w-full bg-ivory">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8 sm:px-10 sm:py-10">
-        <Link href="/" className="flex items-baseline gap-3" aria-label="Lune Sushi">
-          <span className="font-serif-display text-3xl font-medium tracking-wide text-wine sm:text-4xl">
-            LUNE
-          </span>
-          <span className="font-sans-clean text-[11px] uppercase tracking-[0.35em] text-gold">
-            SUSHI
-          </span>
-        </Link>
-        <nav className="hidden items-center gap-10 md:flex" aria-label="Navigation principale">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="font-sans-clean text-[15px] text-ink transition-colors hover:text-wine"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href="tel:+33184802290"
-            className="font-sans-clean text-[15px] font-semibold tracking-wide text-wine"
-          >
-            01 84 80 22 90
-          </a>
-          <Link
-            href="/commander"
-            className="btn-wine inline-flex items-center rounded-full px-6 py-3 font-sans-clean text-sm font-semibold tracking-wider uppercase"
-          >
-            Commander
-          </Link>
-        </nav>
-        <Link
-          href="/commander"
-          className="btn-wine rounded-full px-5 py-3 font-sans-clean text-sm font-semibold tracking-wider uppercase md:hidden"
-        >
-          Commander
-        </Link>
-      </div>
-    </header>
   );
 }
 
@@ -85,7 +34,7 @@ function HeroSection() {
           L&rsquo;art du sushi, avec douceur.
         </p>
         <Link
-          href="/carte"
+          href="/carte/"
           className="btn-wine mt-10 inline-flex items-center rounded-full px-7 py-4 font-sans-clean text-sm font-semibold tracking-[0.18em] uppercase"
         >
           Découvrir la carte
@@ -95,10 +44,13 @@ function HeroSection() {
         </p>
       </div>
       <div className="relative order-1 aspect-[4/3] w-full overflow-hidden md:order-2 md:aspect-auto md:h-full md:min-h-[640px]">
-        <img
-          src="./images/hero-sushi.jpg"
+        <Image
+          src="/images/dish-saumon.jpg"
           alt="Assortiment de sushi sur une assiette sombre avec baguettes"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
         />
       </div>
     </section>
@@ -124,10 +76,12 @@ function SaisonsSection() {
   return (
     <section className="grid w-full grid-cols-1 items-center gap-8 bg-ivory px-6 pb-24 sm:px-10 md:grid-cols-[1fr_minmax(220px,1fr)_1fr] md:gap-12 lg:px-16">
       <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
-        <img
-          src="./images/menu-sushi.jpg"
+        <Image
+          src="/images/dish-maki-jardin.jpg"
           alt="Plateau de maki sur un bateau en bois"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
         />
       </div>
       <div className="flex flex-col items-center text-center md:items-start md:px-4 md:text-left">
@@ -142,29 +96,21 @@ function SaisonsSection() {
           fraîche et sensible.
         </p>
         <Link
-          href="/maison"
+          href="/maison/"
           className="btn-gold mt-7 inline-flex items-center rounded-full px-6 py-3 font-sans-clean text-sm font-semibold tracking-[0.18em] uppercase"
         >
           Notre histoire
         </Link>
       </div>
       <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
-        <img
-          src="./images/season-sushi.jpg"
+        <Image
+          src="/images/dish-vegetal-saison.jpg"
           alt="Sushi saumon sur planche de bois"
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover"
         />
       </div>
     </section>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="mt-auto w-full bg-ivory py-10 text-center">
-      <p className="font-sans-clean text-[13px] tracking-wider text-muted">
-        LUNE SUSHI · 12 rue des Fleurs, Paris · 01 84 80 22 90
-      </p>
-    </footer>
   );
 }
