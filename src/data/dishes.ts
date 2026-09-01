@@ -25,7 +25,7 @@ export const DISHES: Dish[] = [
     ingredients: "Saumon frais, riz vinaigré, wasabi",
     price: 12.9,
     badge: "Création maison",
-    image: "./images/dish-saumon.jpg",
+    image: "/lune-sushi/images/dish-saumon.jpg",
     allergens: "poisson, soja, sésame",
     houseNote:
       "Un plat pensé pour être savouré lentement, sur place, à deux ou chez vous.",
@@ -40,7 +40,7 @@ export const DISHES: Dish[] = [
     pieces: "18 pièces · Légumes de saison, riz, algue nori",
     ingredients: "Concombre, avocat, carotte, radis, laitue, riz, nori",
     price: 10.5,
-    image: "./images/dish-maki-jardin.jpg",
+    image: "/lune-sushi/images/dish-maki-jardin.jpg",
     allergens: "soja, sésame",
     houseNote:
       "Pour un déjeuner léger, ou à partager autour d'une table en terrasse.",
@@ -56,7 +56,7 @@ export const DISHES: Dish[] = [
     ingredients: "Saumon, thon, daurade, avocat, concombre, riz, nori, wasabi",
     price: 29.9,
     badge: "Signature",
-    image: "./images/dish-plateau-lune.jpg",
+    image: "/lune-sushi/images/dish-plateau-lune.jpg",
     allergens: "poisson, soja, sésame",
     houseNote:
       "Notre plateau signature, à partager au centre de la table, pour un soir doux.",
@@ -71,7 +71,7 @@ export const DISHES: Dish[] = [
     pieces: "24 pièces · Légumes, herbes fraîches, riz vinaigré",
     ingredients: "Légumes de saison, herbes fraîches, riz vinaigré, algue nori",
     price: 11.9,
-    image: "./images/dish-vegetal-saison.jpg",
+    image: "/lune-sushi/images/dish-vegetal-saison.jpg",
     allergens: "soja, sésame",
     houseNote:
       "Une assiette qui change au fil des semaines, pour rester surpris et léger.",
