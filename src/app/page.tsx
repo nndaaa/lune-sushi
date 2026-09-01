@@ -97,7 +97,7 @@ function HeroSection() {
       </div>
       <div className="relative order-1 aspect-[4/3] w-full overflow-hidden md:order-2 md:aspect-auto md:h-full md:min-h-[640px]">
         <Image
-          src="/images/hero-sushi.jpg"
+          src="./images/hero-sushi.jpg"
           alt="Assortiment de sushi sur une assiette sombre avec baguettes"
           fill
           priority
@@ -129,7 +129,7 @@ function SaisonsSection() {
     <section className="grid w-full grid-cols-1 items-center gap-8 bg-ivory px-6 pb-24 sm:px-10 md:grid-cols-[1fr_minmax(220px,1fr)_1fr] md:gap-12 lg:px-16">
       <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
         <Image
-          src="/images/menu-sushi.jpg"
+          src="./images/menu-sushi.jpg"
           alt="Plateau de maki sur un bateau en bois"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -156,7 +156,7 @@ function SaisonsSection() {
       </div>
       <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
         <Image
-          src="/images/season-sushi.jpg"
+          src="./images/season-sushi.jpg"
           alt="Sushi saumon sur planche de bois"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
