@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #FCF8F2;
+  --blush: #F3E6E0;
+  --wine: #682E37;
+  --gold: #B89057;
+  --ink: #2D2926;
+  --muted: #756B65;
+  --line: #D6C7BA;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-blush: var(--blush);
+  --color-wine: var(--wine);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-serif: "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+  --font-sans: var(--font-geist-sans);
+}
+
+html, body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans-clean { font-family: var(--font-geist-sans), system-ui, sans-serif; }
+.font-serif-display { font-family: var(--font-serif), Georgia, serif; }
+
+.btn-wine { background: var(--wine); color: #fff; transition: opacity .15s ease; }
+.btn-wine:hover { opacity: .9; }
+.btn-gold { background: var(--gold); color: #fff; transition: opacity .15s ease; }
+.btn-gold:hover { opacity: .9; }
