@@ -75,13 +75,14 @@ function PromiseSection() {
 function SaisonsSection() {
   return (
     <section className="grid w-full grid-cols-1 items-center gap-8 bg-ivory px-6 pb-24 sm:px-10 md:grid-cols-[1fr_minmax(220px,1fr)_1fr] md:gap-12 lg:px-16">
-      <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
+      <div className="w-full overflow-hidden rounded-sm bg-blush">
         <Image
           src="/lune-sushi/images/menu-sushi.jpg"
           alt="Plateau de maki sur un bateau en bois"
-          fill
+          width={1200}
+          height={960}
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </div>
       <div className="flex flex-col items-center text-center md:items-start md:px-4 md:text-left">
@@ -102,13 +103,14 @@ function SaisonsSection() {
           Notre histoire
         </Link>
       </div>
-      <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[5/4]">
+      <div className="w-full overflow-hidden rounded-sm bg-blush">
         <Image
           src="/lune-sushi/images/season-sushi.jpg"
           alt="Sushi saumon sur planche de bois"
-          fill
+          width={1800}
+          height={3197}
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </div>
     </section>
